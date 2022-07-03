@@ -17,7 +17,7 @@
 }
 
 .quiz-list li{
-    display: inline;
+    display: block;
     list-style: none;
     margin-left: auto;
     margin-right: auto;
@@ -28,9 +28,11 @@
 }
 .body { /*body of the quiz*/
     background-color: black;
-    flex-direction: column;
+ flex-wrap: wrap;
 
 }
+
+
 .quiz{ /*Quiz rules styling*/
     
     font-size: 25px;
@@ -41,9 +43,13 @@
     text-decoration: none;
     text-align: center;
     
-
-
 }
+
+.quiz span{
+   
+        color: red;
+    }
+
 
 .quiz:hover{
     cursor: pointer;
@@ -64,7 +70,10 @@
     transition: 2s;
 }
 
-.start-btn{
+
+
+
+.start-btn {
     color: black;
    font-size: 30px;
    border-radius: 5px;
@@ -81,3 +90,38 @@
    transition: 2s;
 }
 
+/* Questions Session*/
+
+
+.ques-tion{
+    background-color: bisque;
+    color: black;
+    border-radius: 5px;
+    width: 500px;
+    height: 450px;
+    text-align: center;
+    align-items: center;
+    
+
+
+}
+
+.ques-tion .title-2{
+    font-size: 40px;
+}
+
+.question-1 {
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+    font-weight: bold;
+    font-size: 25px;
+    border-radius: 5px;
+    align-items: center;
+
+}
+
+.total-questions{
+    color: black;
+    
+}

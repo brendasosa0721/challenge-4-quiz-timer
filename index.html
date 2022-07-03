@@ -15,7 +15,7 @@
         <ul class="quiz-list">
             <li id="high-score">High Score:</li>
         
-            <li id="timer">Timer: 25</li>
+            <li id="timer">Timer: 120</li>
         </ul>
         
         
@@ -23,7 +23,7 @@
 <!--Quiz Rules-->
     <div id="quiz-box" class="quiz">
         <h2 class="title">Quiz Rules</h2>
-        <p>1. You have 25 seconds per question.</p>
+        <p>1. You have <span>120 seconds </span>per question.</p>
         <p> 2. The quiz has 5 questions.</p>
         <p> 3.Passing score is 4 of 5.</p>
         <p> 4. A wrong answer will deduct seconds from your main timer </p>
@@ -32,6 +32,38 @@
     <button class="start-btn">Start Quiz</button>
     </div>
     
+<!-- Quiz Questions-->
+<section id="questions" class="ques-tion">
+    <div>
+        <box class="info-box">
+            <header class="title-2">Sosa's School  Quiz</header>
+            <h4 class="question-1">Question 1 </h4>
+            <div class="time-text"> Time Left:</div>
+            <div class="timer-sec">120</div>
+
+            <div class="option">
+            <p>1. What 2 types of languages have you learned about in Tech Arts? (Not including javaScript)</p>
+
+            <p class="answer">html and coding Wrong</p>
+            <p class="answer">css and html Correct!</p>
+            <p class="answer">English and Spanish Wrong</p>
+            <p class="answer">binary and c++ Wrong</p>
+        </div>
+        
+
+       
+        </box>
+<!--Quiz Box footer -->
+<footer>
+<div class=" total-questions">
+    <span><p>1 0f 5 questions</p></span>
+</div>
+<button class="next=btn">Next Question</button>
+</footer>
+
+    </div>
+</section>
+
 </body>
-<script src="./script.js"
+<script src="./script.js"></script>
 </html>
