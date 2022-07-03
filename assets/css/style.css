@@ -1,16 +1,83 @@
 /* Styling of the Start Quiz Session*/
 
-.quiz{
+.header {
+    color: blanchedalmond;
+    font-size: 50px;
+    display: flex;
+    text-align: center;
+    letter-spacing: 10px;
+    padding: 25px;
+    text-align: center;
+}
+.list{ /* list styling*/
+    color: blanchedalmond;
+    padding: 25px;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+.quiz-list li{
+    display: inline;
+    list-style: none;
+    margin-left: auto;
+    margin-right: auto;
+    top: 0px;
+    height: 50px;
+    width: 100px;
+    
+}
+.body { /*body of the quiz*/
     background-color: black;
+    flex-direction: column;
+
+}
+.quiz{ /*Quiz rules styling*/
+    
     font-size: 25px;
     color: white;
     align-items: center;
+    width: 0px 25px 0px 25px;
+    padding: 200px;
+    text-decoration: none;
+    text-align: center;
     
 
 
 }
 
-.title{
+.quiz:hover{
+    cursor: pointer;
+    color: burlywood;
+   
+}
+
+.title{ /*Title of the quiz rules*/
     color: red;
+    text-align: center;
+    letter-spacing: 3px;
+
+}
+
+.title:hover{
+    color: white;
+    cursor: pointer;
+    transition: 2s;
+}
+
+.start-btn{
+    color: black;
+   font-size: 30px;
+   border-radius: 5px;
+  flex-direction: column;
+
+
+}
+
+.start-btn:hover{
+    cursor: pointer;
+    background-color: bisque;
+    border-color: brown;
+   display: inline;
+   transition: 2s;
 }
 
