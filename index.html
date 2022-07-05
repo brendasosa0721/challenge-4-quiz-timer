@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz</title>
     <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="https://kit.fontawesome.com/5465b12942.js" crossorigin="anonymous"></script>
+    
 </head>
 <header class="header">Bootcamp Quiz</header>
 <body class="body">
@@ -33,37 +33,178 @@
         <!--Start Button-->
         <div class="buttons">
     <button class="start-btn">Start Quiz</button>
-    <button class="quit-btn">Quit Quiz</button>
+   
 </div>
     </div>
     
+
 <!-- Quiz Questions-->
 
 <!--Quiz timer section and title-->
-<div class="quiz-box2">
-    <header>
-        <div class="title">Sosa School Quiz</div>
-        <div class="timer">
-            <div class="time-text">Time Left</div>
+<header>
+    <div class="title">Sosa School Quiz</div>
+    <div class="timer">
+        <div class="time-text">Time Left</div>
+        <div class="timer-sec">120</div>
+    </div>
+</header>
+<!----------------------------------------------->
+<section id="questions1" class=" hidden ques-tion">
+    <div>
+        <box class="info-box">
+            <header class="title-2">Sosa's School  Quiz</header>
+            <h4 class="question-1">Question 1 </h4>
+            <div class="time-text"> Time Left:</div>
             <div class="timer-sec">120</div>
+
+            <div class="option">
+            <p>1. What 2 types of languages have you learned about in Tech Arts? (Not including javaScript)</p>
+
+            <p data-correct= "false" class="answer">html and coding </p>
+            <p data-correct ="true" class="answer">css and html </p>
+            <p data-correct="false" class="answer">English and Spanish </p>
+            <p data-correct="false" class="answer">binary and c++ </p>
         </div>
-    </header>
-<!--Questions/Answer session-->
-<section>
-    <div class="question-text">
-        <span>1. Whar 2 types of languages have you learned about in Tech Arts? (Not including javaScript)</span>
-    </div>
-    <div class="option-list">
-        <div class="answer">
-            <span>html and coding</span>
-            <div class="icon tick"><i class="fas fa-check"></i></div>
-        </div>
-    </div>
-</section>
-    
+        </box>
+
+<!--Quiz Box footer -->
+<footer>
+<div class=" total-questions">
+    <span><p>1 of 5 questions</p></span>
+
+
+</div>
+<button class="next=btn">Next Question</button>
+</footer>
+
 </div>
 </section>
+<!-------------------------------------------------------------------->
+<!--Question 2 -->
+<section id="questions2" class=" hidden ques-tion">
+    <div>
+        <box class="info-box">
+            <header class="title-2">Sosa's School  Quiz</header>
+            <h4 class="question-1">Question 2 </h4>
+            <div class="time-text"> Time Left:</div>
+            <div class="timer-sec">120</div>
 
+            <div class="option">
+            <p>2. HTML language</p>
+
+            <p  data-correct="true"  class="answer">is the coding used to create Websites </p>
+            <p data-correct="false"  class="answer">is the coding used to create font sizes and colors </p>
+            <p data-correct="false"  class="answer">is the coding used to create drawings </p>
+            <p  data-correct="false" class="answer">is never used in the outside world </p>
+        </div>
+        </box>
+
+<!--Quiz Box footer -->
+<footer>
+<div class=" total-questions">
+    <span><p>2 of 5 questions</p></span>
+
+
+</div>
+<button class="next=btn">Next Question</button>
+</footer>
+
+</div>
+</section>
+<!------------------------------------------------------------------->
+<!--Question 3-->
+
+<section id="questions3" class=" hidden ques-tion">
+    <div>
+        <box class="info-box">
+            <header class="title-2">Sosa's School  Quiz</header>
+            <h4 class="question-1">Question 3 </h4>
+            <div class="time-text"> Time Left:</div>
+            <div class="timer-sec">120</div>
+
+            <div class="option">
+            <p>3. If you added an h1 tag, what would it look like?</p>
+
+            <p  data-correct="false"  class="answer">The smallest heading in the html language </p>
+            <p data-correct="true"  class="answer">The largest heading in html language </p>
+            <p data-correct="false"  class="answer">This tag does not exits </p>
+            <p  data-correct="false" class="answer">A different colored heading</p>
+        </div>
+        </box>
+
+<!--Quiz Box footer -->
+<footer>
+<div class=" total-questions">
+    <span><p>3 of 5 questions</p></span>
+
+
+</div>
+<button class="next=btn">Next Question</button>
+</footer>
+
+</div>
+</section>
+<!---------------------------------------------------------------->
+
+<!----Question 4-->
+<section id="questions4" class=" hidden ques-tion">
+    <div>
+        <box class="info-box">
+            <header class="title-2">Sosa's School  Quiz</header>
+            <h4 class="question-1">Question 4 </h4>
+            <div class="time-text"> Time Left:</div>
+            <div class="timer-sec">120</div>
+
+            <div class="option">
+            <p>4.CSS language..</p>
+
+            <p  data-correct="false"  class="answer">is the language used to create Websites </p>
+            <p data-correct="true"  class="answer">is the language used to create font sizes and colors </p>
+            <p data-correct="false"  class="answer">is the coding used to creates pictures </p>
+            <p  data-correct="false" class="answer">is never used in the outside world</p>
+        </div>
+        </box>
+
+<!--Quiz Box footer -->
+<footer>
+<div class=" total-questions">
+    <span><p>4 of 5 questions</p></span>
+
+
+</div>
+<button class="next=btn">Next Question</button>
+</footer>
+<!------------------------------------------------------------------------>
+
+<!-----Question 5-->
+<section id="questions5" class=" hidden ques-tion">
+    <div>
+        <box class="info-box">
+            <header class="title-2">Sosa's School  Quiz</header>
+            <h4 class="question-1">Question 5 </h4>
+            <div class="time-text"> Time Left:</div>
+            <div class="timer-sec">120</div>
+
+            <div class="option">
+            <p>5. What would the coding look like for <span> a heading written in red?</p>
+
+            <p  data-correct="false"  class="answer">{ h1 color: red;}</p>
+            <p data-correct="false"  class="answer">  <h1> color; red </p>
+            <p data-correct="false"  class="answer">h1 { color: green; } </p>
+            <p  data-correct="true" class="answer">h1 { color: red; }</p>
+        </div>
+        </box>
+
+<!--Quiz Box footer -->
+<footer>
+<div class=" total-questions">
+    <span><p>5 of 5 questions</p></span>
+
+
+</div>
+<button class="next=btn">Next Question</button>
+</footer>
+<!------------------------------------------------------------------------------->
 </body>
 <script src="./script.js"></script>
 </html>

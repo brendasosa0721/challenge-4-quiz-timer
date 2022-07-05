@@ -1,3 +1,5 @@
+//Challenge Criteria
+
 // GIVEN I am taking a code quiz
 // WHEN I click the start button
 // THEN a timer starts and I am presented with a question
@@ -48,11 +50,29 @@
 //Variables
 
 var startButton = document.querySelector(".start-btn");
-var quizBox = document.querySelector(".quiz-box2");
+var quizBox = document.querySelector("#quiz-box");
 var quitButton = document.querySelector("quit-btn");
+var questions1 = document.querySelector("#questions1")
+var answers = document.querySelectorAll(".answer")
 
 //If start quiz btn clicked
+// how to remove and move to the next session.
+// how to add all the correct answer within the same function
 
-start-btn.onclick = ()=>{
-    quiz-box2.classList.add("activeInfo");
-}
+startButton.addEventListener("click", function(){
+quizBox.classList.add("hidden")
+
+//calling question 1 after clicking the start btn
+
+questions1.classList.remove("hidden")
+answers.forEach(function(answer){
+    answer.addEventListener("click", function(event){ // calling correct answer with a function
+        console.log(event.target.textContent, event.target.dataset.correct)//calling all correct answer
+    })
+})
+})
+
+// call question
+
+
+
