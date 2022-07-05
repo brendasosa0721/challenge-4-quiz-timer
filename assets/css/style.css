@@ -72,6 +72,7 @@
 
 
 
+/* Start btn*/
 
 .start-btn {
     color: black;
@@ -90,10 +91,34 @@
    transition: 2s;
 }
 
+.quiz-box2.activeInfo{
+z-index: 5;
+opacity: 0;
+pointer-events: auto;
+transform: translate(-50%, -50%) scale(1);
+}
+
+/*Quiz Quit Button*/
+
+.quit-btn{
+    color: black;
+   font-size: 30px;
+   border-radius: 5px;
+  flex-direction: column; 
+}
+
+.quit-btn:hover:hover{
+    cursor: pointer;
+    background-color: bisque;
+    border-color: brown;
+   display: inline;
+   transition: 2s;
+}
+
 /* Questions Session*/
 
 
-.ques-tion{
+/* .ques-tion{
     background-color: bisque;
     color: black;
     border-radius: 5px;
@@ -159,6 +184,7 @@
     padding: 0 8px;
     justify-content: space-between;
     display: inline;
+    pointer-events: none;
 
 }
 
@@ -182,4 +208,4 @@
     cursor: pointer;
     color: brown;
     border-radius: 5px;
-}
+} */

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://kit.fontawesome.com/5465b12942.js" crossorigin="anonymous"></script>
 </head>
 <header class="header">Bootcamp Quiz</header>
 <body class="body">
@@ -26,41 +27,41 @@
         <p>1. You have <span>120 seconds </span>per question.</p>
         <p> 2. The quiz has 5 questions.</p>
         <p> 3.Passing score is 4 of 5.</p>
-        <p> 4. A wrong answer will deduct seconds from your main timer </p>
+        <p> 4. A wrong answer will deduct seconds from your main timer. </p>
+        <p>5. You cannot terminate the Quiz.</p>
 
         <!--Start Button-->
+        <div class="buttons">
     <button class="start-btn">Start Quiz</button>
+    <button class="quit-btn">Quit Quiz</button>
+</div>
     </div>
     
 <!-- Quiz Questions-->
-<section id="questions" class="ques-tion">
-    <div>
-        <box class="info-box">
-            <header class="title-2">Sosa's School  Quiz</header>
-            <h4 class="question-1">Question 1 </h4>
-            <div class="time-text"> Time Left:</div>
+
+<!--Quiz timer section and title-->
+<div class="quiz-box2">
+    <header>
+        <div class="title">Sosa School Quiz</div>
+        <div class="timer">
+            <div class="time-text">Time Left</div>
             <div class="timer-sec">120</div>
-
-            <div class="option">
-            <p>1. What 2 types of languages have you learned about in Tech Arts? (Not including javaScript)</p>
-
-            <p class="answer">html and coding Wrong</p>
-            <p class="answer">css and html Correct!</p>
-            <p class="answer">English and Spanish Wrong</p>
-            <p class="answer">binary and c++ Wrong</p>
         </div>
-        
-
-        </box>
-<!--Quiz Box footer -->
-<footer>
-<div class=" total-questions">
-    <span><p>1 of 5 questions</p></span>
-</div>
-<button class="next=btn">Next Question</button>
-</footer>
-
+    </header>
+<!--Questions/Answer session-->
+<section>
+    <div class="question-text">
+        <span>1. Whar 2 types of languages have you learned about in Tech Arts? (Not including javaScript)</span>
     </div>
+    <div class="option-list">
+        <div class="answer">
+            <span>html and coding</span>
+            <div class="icon tick"><i class="fas fa-check"></i></div>
+        </div>
+    </div>
+</section>
+    
+</div>
 </section>
 
 </body>

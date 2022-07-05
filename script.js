@@ -13,10 +13,10 @@
 /////////// Questions for the questions with correct and wrong answer.
 
 // 1. Whar 2 types of languages have you learned about in Tech Arts? (Not including javaScript)
-//html and coding Wrong
+//html and coding 
 //css and html Correct!
-//English and Spanish Wrong
-//binary and c++ Wrong
+//English and Spanish 
+//binary and c++ 
 
 // 2. HTML language
 // is the coding used to create Websites Correct!
@@ -45,17 +45,14 @@
 
 
 
-// on Click replaced the start button with questions
-var startButtonEl = document.querySelector (".start-btn")
-console.log("hide")
-var mainBodyEl = document.querySelector(".body")
+//Variables
 
+var startButton = document.querySelector(".start-btn");
+var quizBox = document.querySelector(".quiz-box2");
+var quitButton = document.querySelector("quit-btn");
 
-// var createH2El = document.createElement ("h2")
-// createH2El.className = ("title")
-// createH2El.textContent = "hi I am a question"
-// mainBodyEl.appendChild (createH2El)
-// startButtonEl.addEventListener("click" , createH2El)
+//If start quiz btn clicked
 
-
-
+start-btn.onclick = ()=>{
+    quiz-box2.classList.add("activeInfo");
+}
