@@ -54,6 +54,8 @@ var quizBox = document.querySelector("#quiz-box");
 var quitButton = document.querySelector("quit-btn");
 var questions1 = document.querySelector("#questions1")
 var answers = document.querySelectorAll(".answer")
+var nextquestion = document.querySelector(".next-btn")
+var question2 = document.querySelector("#questions2")
 
 //If start quiz btn clicked
 // how to remove and move to the next session.
@@ -68,11 +70,21 @@ questions1.classList.remove("hidden")
 answers.forEach(function(answer){
     answer.addEventListener("click", function(event){ // calling correct answer with a function
         console.log(event.target.textContent, event.target.dataset.correct)//calling all correct answer
+
+        nextquestion.addEventListener("click", function(){
+            questions1.classList.add("hidden")
+        })
+        //calling question 2 after clicking next question btn
+
+questions2.classList.remove("hidden")
+
     })
 })
 })
 
-// call question
+
+
+
 
 
 
