@@ -56,6 +56,10 @@ var questions1 = document.querySelector("#questions1")
 var answers = document.querySelectorAll(".answer")
 var nextquestion = document.querySelector(".next-btn")
 var question2 = document.querySelector("#questions2")
+var question3 = document.querySelector("#questions3")
+var question4 = document.querySelector("#questions4")
+var question5 = document.querySelector("#questions5")
+
 
 //If start quiz btn clicked
 // how to remove and move to the next session.
@@ -76,15 +80,32 @@ answers.forEach(function(answer){
         })
         //calling question 2 after clicking next question btn
 
-questions2.classList.remove("hidden")
-
+        nextquestion.addEventListener("click", function(){
+            question2.classList.remove("hidden")
+        }) 
     })
+
 })
-})
 
+        // //calling question 3 after clicking next question btn
+        // nextquestion.addEventListener("click", function(){
+        // questions3.classList.add("hidden")
+        // })
 
+        // nextquestion.addEventListener("click", function(){
+        //     questions3.classList.remove("hidden")
+        })
+//    //calling question 4 after clicking next question btn
+//        nextquestion.addEventListener("click" , function(){
+//          questions4.classList.remove("hidden")
+//         })
 
+//        //calling questin 5 after clicking next question btn
 
+//        nextquestion.addEventListener("click", function(){
+//         questions5.classList.remove("hidden")
+//         })
+  
 
 
 
