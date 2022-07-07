@@ -1,7 +1,7 @@
 //Challenge Criteria
 
 // GIVEN I am taking a code quiz
-// WHEN I click the start button
+// WHEN I click the start button////
 // THEN a timer starts and I am presented with a question
 // WHEN I answer a question
 // THEN I am presented with another question
@@ -15,10 +15,10 @@
 /////////// Questions for the questions with correct and wrong answer.
 
 // 1. Whar 2 types of languages have you learned about in Tech Arts? (Not including javaScript)
-//html and coding 
+//html and coding
 //css and html Correct!
-//English and Spanish 
-//binary and c++ 
+//English and Spanish
+//binary and c++
 
 // 2. HTML language
 // is the coding used to create Websites Correct!
@@ -32,7 +32,6 @@
 // The largest heading in html language Correct!
 // A different colored heading Wrong
 
-
 // 4. CSS language..
 // is the language used to create Websites Wrong
 // is the language used to create font sizes and colors Correct!
@@ -42,70 +41,98 @@
 // 5. What would the coding look like for <span> a heading written in red?
 // { h1 color: red;} Wrong
 // <h1> color; red Wrong
-// h1 { color: green; } Wrong 
+// h1 { color: green; } Wrong
 // h1 { color: red; } Correct!
 
-
+var timerEl = document.getElementById("countdown");
+var mainEl = document.getElementById("main");
+var timeLeft = 120;
 
 //Variables
 
 var startButton = document.querySelector(".start-btn");
 var quizBox = document.querySelector("#quiz-box");
 var quitButton = document.querySelector("quit-btn");
-var questions1 = document.querySelector("#questions1")
-var answers = document.querySelectorAll(".answer")
-var nextquestion = document.querySelector(".next-btn")
-var question2 = document.querySelector("#questions2")
-var question3 = document.querySelector("#questions3")
-var question4 = document.querySelector("#questions4")
-var question5 = document.querySelector("#questions5")
+var questions1 = document.querySelector("#questions1");
+var answers = document.querySelectorAll(".answer");
+var nextquestion = document.querySelector(".next-btn");
+var question2 = document.querySelector("#questions2");
+var question3 = document.querySelector("#questions3");
+var question4 = document.querySelector("#questions4");
+var question5 = document.querySelector("#questions5");
+var questioncountdown = document.querySelector(".timer-sec");
 
+//if next bt clicked
 
 //If start quiz btn clicked
 // how to remove and move to the next session.
 // how to add all the correct answer within the same function
 
-startButton.addEventListener("click", function(){
-quizBox.classList.add("hidden")
+startButton.addEventListener("click", function () {
+  quizBox.classList.add("hidden"),
+    //questioncountdown});
 
-//calling question 1 after clicking the start btn
+    //calling question 1 after clicking the start btn
 
-questions1.classList.remove("hidden")
-answers.forEach(function(answer){
-    answer.addEventListener("click", function(event){ // calling correct answer with a function
-        console.log(event.target.textContent, event.target.dataset.correct)//calling all correct answer
-
-        nextquestion.addEventListener("click", function(){
-            questions1.classList.add("hidden")
-        })
-        //calling question 2 after clicking next question btn
-
-        nextquestion.addEventListener("click", function(){
-            question2.classList.remove("hidden")
-        }) 
-    })
-
-})
-
-        // //calling question 3 after clicking next question btn
-        // nextquestion.addEventListener("click", function(){
-        // questions3.classList.add("hidden")
-        // })
-
-        // nextquestion.addEventListener("click", function(){
-        //     questions3.classList.remove("hidden")
-        })
-//    //calling question 4 after clicking next question btn
-//        nextquestion.addEventListener("click" , function(){
-//          questions4.classList.remove("hidden")
-//         })
-
-//        //calling questin 5 after clicking next question btn
-
-//        nextquestion.addEventListener("click", function(){
-//         questions5.classList.remove("hidden")
-//         })
-  
+    questions1.classList.remove("hidden");
+    // question2.classList.add("hidden")
+    // question3.classList.add("hidden")
 
 
+    nextquestion.addEventListener("click", function () {
+      questions1.classList.add("hidden");
+      question2.classList.remove("hidden");
+      question3.classList.add("hidden");
+    });
 
+  answers.forEach(function (answer) {
+    answer.addEventListener("click", function (event) {
+      // calling correct answer with a function
+      console.log(event.target.textContent, event.target.dataset.correct); //calling all correct answer
+
+      // nextquestion.addEventListener("click", function () {
+      //   questions1.classList.add("hidden");
+      //   question2.classList.remove("hidden");
+      //   question3.classList.add("hidden")
+        
+        
+      // });
+     
+      //calling question 2 after clicking next question btn
+
+      // nextquestion.addEventListener("click", function () {
+      //   question2.classList.remove("hidden");
+      // });
+
+      // nextquestion.addEventListener("click", function () {
+      //   question3.classList.remove("hidden");
+      // });
+    });
+  });
+});
+
+//calling question 4 after clicking next question btn
+// nextquestion.addEventListener("click", function () {
+//   question4.classList.remove("hidden");
+// });
+
+//calling questin 5 after clicking next question btn
+
+// nextquestion.addEventListener("click", function () {
+//   question5.classList.remove("hidden");
+// });
+
+function questioncountdown() {
+  // TODO: Add a comment describing the functionality of the setInterval() method:
+  var timerId = setInterval(function () {
+    if (timeLeft > 0) {
+      timerEl.textContent = "Time left is " + timeLeft;
+    } else {
+      timerEl.textContent = "";
+      clearInterval(timerId);
+      displayMessage();
+    }
+
+    timeLeft = timeLeft - 1;
+  }, 1000);
+}
