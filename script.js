@@ -38,17 +38,9 @@
 // is the coding used to creates pictures Wrong
 // is never used in the outside world Wrong
 
-// 5. What would the coding look like for <span> a heading written in red?
-// { h1 color: red;} Wrong
-// <h1> color; red Wrong
-// h1 { color: green; } Wrong
-// h1 { color: red; } Correct!
-
-var timerEl = document.getElementById("countdown");
-var mainEl = document.getElementById("main");
-var timeLeft = 120;
-
 //Variables
+
+//var mainEl = document.getElementById("main");
 
 var startButton = document.querySelector(".start-btn");
 var quizBox = document.querySelector("#quiz-box");
@@ -59,14 +51,14 @@ var nextquestion = document.querySelector(".next-btn");
 var question2 = document.querySelector("#questions2");
 var question3 = document.querySelector("#questions3");
 var question4 = document.querySelector("#questions4");
-var question5 = document.querySelector("#questions5");
 var questioncountdown = document.querySelector(".timer-sec");
 var nextq = document.querySelector(".next-btn2");
 var nextq3 = document.querySelector(".next-btn3");
 var nextq4 = document.querySelector(".next-btn4");
-var nextq5 = document.querySelector(".next-btn5");
+var endquiz = document.querySelector(".end-quiz")
+var endbuttom = document.querySelector("#end-btn")
+var countdownEl = document.querySelector("#countdown")
 
-//if next bt clicked
 
 //If start quiz btn clicked
 // how to remove and move to the next session.
@@ -74,8 +66,8 @@ var nextq5 = document.querySelector(".next-btn5");
 
 startButton.addEventListener("click", function () {
   quizBox.classList.add("hidden"),
-    //questioncountdown});
-
+   
+  
     //calling question 1 after clicking the start btn
 
     questions1.classList.remove("hidden");
@@ -84,44 +76,55 @@ startButton.addEventListener("click", function () {
     answer.addEventListener("click", function (event) {
       // calling correct answer with a function
       console.log(event.target.textContent, event.target.dataset.correct); //calling all correct answer
+
       // Calling Question 2 after clicking the next btn
       nextquestion.addEventListener("click", function () {
         questions1.classList.add("hidden");
         question2.classList.remove("hidden");
       });
+
       // Calling Question 3 after clicking the next btn
       nextq.addEventListener("click", function () {
         question2.classList.add("hidden");
         question3.classList.remove("hidden");
       });
+
       // Calling Question 4  after clicking the next btn
       nextq3.addEventListener("click", function () {
         question3.classList.add("hidden");
         question4.classList.remove("hidden");
       });
-
-      //Calling Question 5 after clicking the next btn
+      //Hidden Question 4 after clicking the next btn
       nextq4.addEventListener("click", function () {
         question4.classList.add("hidden");
-        question5.classList.remove("hidden");
+        endquiz.classList.remove("hide");
       });
     });
-    
+  
   });
 });
 
+  //End Part of the quiz save, high score & initials
+   
 
-function questioncountdown() {
-  // TODO: Add a comment describing the functionality of the setInterval() method:
-  var timerId = setInterval(function () {
-    if (timeLeft > 0) {
-      timerEl.textContent = "Time left is " + timeLeft;
-    } else {
-      timerEl.textContent = "";
+//Timer Function
+
+  var timerEl = document.getElementById("countdown");
+  var timeLeft = 120;
+    var timerId = setInterval(function () {
+   if (timeLeft > 0) {
+       timerEl.textContent = "Time left is " + timeLeft;
+     } else {
+        timerEl.textContent = "You are out of time";
       clearInterval(timerId);
       displayMessage();
-    }
+      
+           }
+      timeLeft = timeLeft - 1;
+    }, 1000); 
+  
+   
 
-    timeLeft = timeLeft - 1;
-  }, 1000);
-}
+
+
+ 

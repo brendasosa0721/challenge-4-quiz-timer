@@ -25,10 +25,11 @@
     <div id="quiz-box" class="quiz">
         <h2 class="title">Quiz Rules</h2>
         <p>1. You have <span>120 seconds </span>per question.</p>
-        <p> 2. The quiz has 5 questions.</p>
-        <p> 3.Passing score is 4 of 5.</p>
+        <p> 2. The quiz has 4 questions.</p>
+        <p> 3.Passing score is 3 of 4.</p>
         <p> 4. A wrong answer will deduct seconds from your main timer. </p>
         <p>5. You cannot terminate the Quiz.</p>
+        <p>6. You would have to submit and enter your initials to received your results</p>
 
         <!--Start Button-->
         <div class="buttons">
@@ -47,8 +48,7 @@
         <box class="info-box">
             <header class="title-2">Sosa's School  Quiz</header>
             <h4 class="question-1">Question 1 </h4>
-            <div class="time-text"> Time Left:</div>
-            <div class="countdown" class="timer-sec">120</div>
+            <div id="countdown" class="timer-sec"></div>
 
             <div class="option">
             <p>1. What 2 types of languages have you learned about in Tech Arts? (Not including javaScript)</p>
@@ -65,7 +65,7 @@
 
 <button class="next-btn">Next Question</button>
 <div class=" total-questions">
-    <span><p>1 of 5 questions</p></span>
+    <span><p>1 of 4 questions</p></span>
 
 
 </div>
@@ -80,8 +80,7 @@
         <box class="info-box">
             <header class="title-2">Sosa's School  Quiz</header>
             <h4 class="question-1">Question 2 </h4>
-            <div class="time-text"> Time Left:</div>
-            <div class="timer-sec">120</div>
+            <div id="countdown" class="timer-sec"></div>
 
             <div class="option">
             <p>2. HTML language</p>
@@ -98,7 +97,7 @@
 <button class="next-btn2">Next Question</button>
 
 <div class=" total-questions">
-    <span><p>2 of 5 questions</p></span>
+    <span><p>2 of 4 questions</p></span>
 </div>
 </footer>
 
@@ -112,8 +111,7 @@
         <box class="info-box">
             <header class="title-2">Sosa's School  Quiz</header>
             <h4 class="question-1">Question 3 </h4>
-            <div class="time-text"> Time Left:</div>
-            <div class="timer-sec">120</div>
+            <div id="countdown" class="timer-sec"></div>
 
             <div class="option">
             <p>3. If you added an h1 tag, what would it look like?</p>
@@ -130,7 +128,7 @@
 <button  class="next-btn3">Next Question</button>
 
 <div class=" total-questions">
-    <span><p>3 of 5 questions</p></span>
+    <span><p>3 of 4 questions</p></span>
 </div>
 </footer>
 
@@ -144,8 +142,7 @@
         <box class="info-box">
             <header class="title-2">Sosa's School  Quiz</header>
             <h4 class="question-1">Question 4 </h4>
-            <div class="time-text"> Time Left:</div>
-            <div class="timer-sec">120</div>
+            <div id="countdown"  class="timer-sec"></div>
 
             <div class="option">
             <p>4.CSS language..</p>
@@ -159,42 +156,23 @@
 
 <!--Quiz Box footer -->
 <footer>
-<button class="next-btn4">Next Question</button>
+<button id="end-btn"   class="next-btn4">Next Question</button>
 <div class=" total-questions">
-    <span><p>4 of 5 questions</p></span>
+    <span><p>4 of 4 questions</p></span>
 </div>
 
 </footer>
-<!------------------------------------------------------------------------>
 
-<!-----Question 5-->
-<section id="questions5" class=" hidden ques-tion">
-    <div>
-        <box class="info-box">
-            <header class="title-2">Sosa's School  Quiz</header>
-            <h4 class="question-1">Question 5 </h4>
-            <div class="time-text"> Time Left:</div>
-            <div class="timer-sec">120</div>
+<section class="hide end-quiz">
+    <h1 class="title-end">End of the Quiz</h1>
+    <button class="submit-btn">Submit your answers</button>
+    <h2 class="highscore">Highscore</h2>
+    
+    <form class="initial-box">Please enter your Initials</form>
+    <input class="initial">
+    <button class="save-btn">Save</button>
 
-            <div class="option">
-            <p>5. What would the coding look like for <span> a heading written in red?</p>
-
-            <p  data-correct="false"  class="answer">{ h1 color: red;}</p>
-            <p data-correct="false"  class="answer">  <h1> color; red </p>
-            <p data-correct="false"  class="answer">h1 { color: green; } </p>
-            <p  data-correct="true" class="answer">h1 { color: red; }</p>
-        </div>
-        </box>
-
-<!--Quiz Box footer -->
-<footer>
-<button class="next-btn5">Next Question</button>
-
-<div class=" total-questions">
-    <span><p>5 of 5 questions</p></span>
-</div>
-</footer>
-<!------------------------------------------------------------------------------->
+</section>
 </body>
 <script src="./script.js"></script>
 </html>
