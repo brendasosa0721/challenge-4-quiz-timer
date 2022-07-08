@@ -95,7 +95,7 @@ startButton.addEventListener("click", function () {
         question4.classList.remove("hidden");
       });
       //Hidden Question 4 after clicking the next btn
-      
+      endquiz.classList.remove("hidden")
     });
   
   });
