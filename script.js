@@ -61,6 +61,10 @@ var question3 = document.querySelector("#questions3");
 var question4 = document.querySelector("#questions4");
 var question5 = document.querySelector("#questions5");
 var questioncountdown = document.querySelector(".timer-sec");
+var nextq = document.querySelector(".next-btn2");
+var nextq3 = document.querySelector(".next-btn3");
+var nextq4 = document.querySelector(".next-btn4");
+var nextq5 = document.querySelector(".next-btn5");
 
 //if next bt clicked
 
@@ -75,52 +79,37 @@ startButton.addEventListener("click", function () {
     //calling question 1 after clicking the start btn
 
     questions1.classList.remove("hidden");
-    // question2.classList.add("hidden")
-    // question3.classList.add("hidden")
-
-
-    nextquestion.addEventListener("click", function () {
-      questions1.classList.add("hidden");
-      question2.classList.remove("hidden");
-      question3.classList.add("hidden");
-    });
 
   answers.forEach(function (answer) {
     answer.addEventListener("click", function (event) {
       // calling correct answer with a function
       console.log(event.target.textContent, event.target.dataset.correct); //calling all correct answer
+      // Calling Question 2 after clicking the next btn
+      nextquestion.addEventListener("click", function () {
+        questions1.classList.add("hidden");
+        question2.classList.remove("hidden");
+      });
+      // Calling Question 3 after clicking the next btn
+      nextq.addEventListener("click", function () {
+        question2.classList.add("hidden");
+        question3.classList.remove("hidden");
+      });
+      // Calling Question 4  after clicking the next btn
+      nextq3.addEventListener("click", function () {
+        question3.classList.add("hidden");
+        question4.classList.remove("hidden");
+      });
 
-      // nextquestion.addEventListener("click", function () {
-      //   questions1.classList.add("hidden");
-      //   question2.classList.remove("hidden");
-      //   question3.classList.add("hidden")
-        
-        
-      // });
-     
-      //calling question 2 after clicking next question btn
-
-      // nextquestion.addEventListener("click", function () {
-      //   question2.classList.remove("hidden");
-      // });
-
-      // nextquestion.addEventListener("click", function () {
-      //   question3.classList.remove("hidden");
-      // });
+      //Calling Question 5 after clicking the next btn
+      nextq4.addEventListener("click", function () {
+        question4.classList.add("hidden");
+        question5.classList.remove("hidden");
+      });
     });
+    
   });
 });
 
-//calling question 4 after clicking next question btn
-// nextquestion.addEventListener("click", function () {
-//   question4.classList.remove("hidden");
-// });
-
-//calling questin 5 after clicking next question btn
-
-// nextquestion.addEventListener("click", function () {
-//   question5.classList.remove("hidden");
-// });
 
 function questioncountdown() {
   // TODO: Add a comment describing the functionality of the setInterval() method:
